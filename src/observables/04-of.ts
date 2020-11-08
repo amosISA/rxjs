@@ -1,4 +1,8 @@
-import { of } from 'rxjs';
+import { asyncScheduler, of } from 'rxjs';
+
+/*
+    of => if we want to emit numbers, or strings, or whatever, they are emitted synchronous by default
+*/
 
 // const obs$ = of<number>(1,2,3,4,5,6);
 // const obs$ = of<number>(...[1,2,3,4,5,6],2,3,4);

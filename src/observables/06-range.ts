@@ -1,5 +1,10 @@
 import { of, range, asyncScheduler } from 'rxjs';
 
+/*
+    range => emit a sequence of numbers in base to their range, by default they are synchronous, but they
+    can be transformed to async with asyncScheduler
+*/
+
 // This code is synchronus
 console.log('start');
 const obs$ = of(1,2,3,4,5,6,7);
