@@ -9,3 +9,5 @@ Cold ones produce data inside the Observable, and the hot ones helps us to produ
 data outside them (we reach this with Subject())
 
 * Functions to create Observables: of, from, fromEvent, range, interval, timer
+
+* Basic operators: map, pluck, mapTo, filter, tap, reduce, scan
