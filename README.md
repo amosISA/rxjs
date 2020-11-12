@@ -11,3 +11,8 @@ data outside them (we reach this with Subject())
 * Functions to create Observables: of, from, fromEvent, range, interval, timer
 
 * Basic operators: map, pluck, mapTo, filter, tap, reduce, scan
+
+* Other basic operators: take, first, takeWhile, takeUntil, skip, distinct, distinctUntilChanged,
+distinctUntilKeyChanged
+
+* Time operators: debounceTime, throttleTime, sampleTime, sample, auditTime

@@ -6,8 +6,6 @@ import { auditTime, tap, map } from 'rxjs/operators';
 
     p ej.: si emite A, entonces espera determinado tiempo (dos segundos), antes de cumplirse esos
     dos segundos se emiten B y C entonces al llegar a 2 segundos se emitiria C
-
-    nos ayudan a controlar observables q emitan valores muy rápido
 */
 
 const click$ = fromEvent<MouseEvent>( document, 'click');
