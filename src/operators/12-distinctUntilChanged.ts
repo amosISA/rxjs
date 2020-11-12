@@ -45,6 +45,7 @@ const personajes: Personaje[] = [
 ];
 
 from( personajes ).pipe(
+    // if previous === actual => true si lo quiero bloquear, if false lo dejo pasar
     distinctUntilChanged( (ant, act) => ant.nombre === act.nombre )
 ).subscribe( console.log );
 

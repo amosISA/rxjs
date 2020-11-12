@@ -1,19 +1,15 @@
 import { of, from } from 'rxjs';
-import { distinct, distinctUntilChanged } from 'rxjs/operators';
+import { distinct } from 'rxjs/operators';
 
 /*
-    distinctUntilChanged => se diferencia de distinct, en q emite valores siempre y cuando
-    la emision anterior no sea la misma
-
-    ej: 1,2,2,1,3 => esto emite => 1,2,1,3 => el 1 se vuelve a emitir pq el 1 no es igual a 2 (el anterior)
-
-    tmb usa el ===
+    distinct => deja pasar los valores q no han sido previamente emitidos
 */
+
 
 const numeros$ = of<number|string>(1,'1',1,3,3,2,2,4,4,5,3,1, '1' );
 
 numeros$.pipe(
-    distinctUntilChanged()
+    distinct() // ===
 ).subscribe( console.log );
 
 interface Personaje {
@@ -25,7 +21,7 @@ const personajes: Personaje[] = [
         nombre: 'Megaman'
     },
     {
-        nombre: 'Megaman'
+        nombre: 'X'
     },
     {
         nombre: 'Zero'
@@ -37,7 +33,7 @@ const personajes: Personaje[] = [
         nombre: 'X'
     },
     {
-        nombre: 'X'
+        nombre: 'Megaman'
     },
     {
         nombre: 'Zero'
@@ -45,7 +41,7 @@ const personajes: Personaje[] = [
 ];
 
 from( personajes ).pipe(
-    distinctUntilChanged( (ant, act) => ant.nombre === act.nombre )
+    distinct( p => p.nombre )
 ).subscribe( console.log );
 
 
