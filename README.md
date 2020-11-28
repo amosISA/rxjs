@@ -16,3 +16,7 @@ data outside them (we reach this with Subject())
 distinctUntilKeyChanged
 
 * Time operators: debounceTime, throttleTime, sampleTime, sample, auditTime
+
+* Transformation: mergeAll, mergeMap, switchMap, concatMap, exhaustMap
+
+* Combination: startWith, endWith, concat, merge, combineLatest, forkJoin
